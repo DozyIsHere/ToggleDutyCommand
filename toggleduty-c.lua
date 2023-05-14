@@ -55,4 +55,9 @@ RegisterCommand("duty", function()
     elseif playerData.job.name == nil then 
         print('You dont have a job lazy bum!')
     end
+    if playerData.job.onduty == true then
+        QBCore.Functions.Notify('You have clocked off duty!', 'error')
+    else 
+        QBCore.Functions.Notify('You have clocked on duty!', 'succes')
+    end
 end)
